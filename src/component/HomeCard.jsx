@@ -5,6 +5,7 @@ import style from "./HomeCard.module.css";
 import { GrFormClose } from "react-icons/gr";
 import { VscChromeMaximize } from "react-icons/vsc";
 import { HiMinusSm } from "react-icons/hi";
+import Commands from "./commands.json";
 
 function HomeCard() {
   const inputEl = useRef(null);
@@ -12,34 +13,61 @@ function HomeCard() {
   const [inputValue, setInputValue] = useState("");
   const [preInputs, setPreInputs] = useState([]);
   const [inputResult, setInputResult] = useState([]);
-  const [rootUser, setRootUser] = useState("root@kali :~$");
-
-  const command = {
-    whois: "My Name is Devarshi Patel. I am a Web Developer.",
-    hobby: ["coding", " cricket", " chess"],
-    hi: "Hi... Welcome to my Website :)",
-    github: "https://github.com/dpatel-8112",
-    portfolio: "http://amazingdotdp.me/portfolio/",
-    "--help":
-      "For the list of Commands type : ls And then type any one of the command to get its results. Thank YOu!",
-    ls: ["hi", " whois", " hobby", " portfolio", " github"],
-  };
+  const [rootUser, setRootUser] = useState("root@amazing :~$");
 
   const inputValueHandler = (e) => {
     setInputValue(e.target.value);
+
     // console.log(e.target.value);
+  };
+
+  const externalLinkHandler = (linkItem) => {
+    if (window.confirm(`Would you like to visit my ${inputValue}`)) {
+      window.open(linkItem.link);
+      setInputResult(
+        <a target="_blank" href={linkItem.link}>
+          {linkItem.link}
+        </a>
+      );
+    } else {
+      setInputResult(
+        <a target="_blank" href={linkItem.link}>
+          {linkItem.link}
+        </a>
+      );
+    }
   };
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
     setInputResult([]);
 
-    for (var i in command) {
-      // console.log(command[i]);
-      if (i == inputValue) {
-        setInputResult([command[i]]);
-        // console.log([command[i]]);
+    let found = 0;
+
+    Commands.filter((item) => item.command == inputValue).map((fItem) => {
+      // console.log(fItem);
+      found = 1;
+
+      if (fItem.type == "link") {
+        externalLinkHandler(fItem);
+        found = 1;
+      } else if (fItem.type == "text") {
+        let results = [];
+        results = fItem.result.map((item) => item + " ");
+        setInputResult(results);
+      } else {
+        let results = [];
+        results = fItem.result.map((item) => " ➡ " + item + " ");
+        setInputResult(results);
       }
+    });
+
+    if (found == 0) {
+      setInputResult([
+        "'" +
+          inputValue +
+          "' is not recognized as an internal or external command !!!",
+      ]);
     }
   };
 
@@ -61,12 +89,6 @@ function HomeCard() {
       ]);
     }
 
-    if (inputValue == "github" || inputValue == "portfolio") {
-      if (window.confirm(`Would you like to visit my ${inputValue}`)) {
-        window.location.href = `${command[inputValue]}`;
-      }
-    }
-
     setInputValue("");
 
     return () => {};
@@ -82,7 +104,7 @@ function HomeCard() {
         </Card.Header>
         <Card.Body className={style.CardBody}>
           {/* <Card.Title>Special title treatment</Card.Title> */}
-          <Card.Text>
+          <Card.Text style={{ minHeight: "5000px" }}>
             {preInputs}
 
             <span style={{ display: "block" }}>
@@ -95,6 +117,7 @@ function HomeCard() {
                     value={inputValue}
                     onChange={inputValueHandler}
                   />
+                  {/* <button type="submit" style={{ display: "none" }}></button> */}
                 </form>
               </span>
             </span>
@@ -104,7 +127,7 @@ function HomeCard() {
 
       <div className={style.Notice}>
         <mark>
-          PS : type '<code>ls</code>' AND '<code>--help</code>' for commands!
+          💻 Type '<code>ls</code>' OR '<code>help</code>' for commands!
         </mark>
       </div>
 

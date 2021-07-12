@@ -1,0 +1,53 @@
+[
+  {
+    "id": 0,
+    "type": "ls",
+    "command": "ls",
+    "result": ["hi", "whois", "github", "portfolio", "projects"]
+  },
+  {
+    "id": 1,
+    "command": "help",
+    "type": "text",
+    "result": ["To get all the command type 'ls' in the terminal."]
+  },
+  {
+    "id": 2,
+    "command": "hi",
+    "type": "text",
+    "result": ["Hi ...", "Welcome to My Website"]
+  },
+  {
+    "id": 3,
+    "command": "whois",
+    "type": "text",
+    "result": [
+      "My name is Devarshi Patel.",
+      "I develop Web Application using ReactJS"
+    ]
+  },
+  {
+    "id": 4,
+    "command": "hobby",
+    "type": "text",
+    "result": ["coding", "cricket", "chess"]
+  },
+  {
+    "id": 5,
+    "command": "github",
+    "type": "link",
+    "link": "https://github.com/dpatel-8112"
+  },
+  {
+    "id": 6,
+    "command": "portfolio",
+    "type": "link",
+    "link": "http://amazingdotdp.me/portfolio/"
+  },
+  {
+    "id": 7,
+    "command": "projects",
+    "type": "link",
+    "link": "http://amazingdotdp.me/web-projects/"
+  }
+]

@@ -72,6 +72,7 @@
   padding: 3px 0px;
 }
 .UserRoot {
+  user-select: none;
 }
 .InputContainer {
   color: white;
