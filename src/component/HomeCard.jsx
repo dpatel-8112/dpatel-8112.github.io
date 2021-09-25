@@ -51,6 +51,13 @@ function HomeCard() {
       if (fItem.type == "link") {
         externalLinkHandler(fItem);
         found = 1;
+      } else if (fItem.command == "clear") {
+        let results = [];
+        // results = fItem.result.map((item) => item + " ");
+
+        setPreInputs("");
+        setInputResult("");
+        setInputValue("");
       } else if (fItem.type == "text") {
         let results = [];
         results = fItem.result.map((item) => item + " ");

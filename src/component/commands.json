@@ -3,7 +3,7 @@
     "id": 0,
     "type": "ls",
     "command": "ls",
-    "result": ["hi", "whois", "github", "portfolio", "projects"]
+    "result": ["hi", "whois", "github", "portfolio", "projects", "clear"]
   },
   {
     "id": 1,
@@ -49,5 +49,11 @@
     "command": "projects",
     "type": "link",
     "link": "http://amazingdotdp.me/web-projects/"
+  },
+  {
+    "id": 8,
+    "command": "clear",
+    "type": "text",
+    "result": []
   }
 ]
