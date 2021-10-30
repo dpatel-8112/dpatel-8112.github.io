@@ -103,7 +103,10 @@ function HomeCard() {
 
   return (
     <>
-      <Card className={style.CardContainer}>
+      <Card
+        className={style.CardContainer}
+        onClick={() => inputEl.current.focus()}
+      >
         <Card.Header className={style.CardHeader}>
           <GrFormClose className={style.CloseIcon} />
           <VscChromeMaximize className={style.MaximizeIcon} />
