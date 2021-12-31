@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -28,7 +30,11 @@
   letter-spacing: 0.7px;
   overflow-y: auto;
 }
-
+.maximizeClass {
+  width: 98%;
+  height: 100%;
+  max-height: 80vh;
+}
 @media only screen and (max-width: 720px) {
   .CardContainer {
     width: 80%;
@@ -92,10 +98,10 @@
   width: inherit;
 }
 .Result {
-  font-family: monospace;
+  font-family: "Courier Prime", monospace;
   color: wheat;
   display: block;
-  font-size: 14px;
+  font-size: 15px;
 }
 .Notice {
   color: black;

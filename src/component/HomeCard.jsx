@@ -13,7 +13,8 @@ function HomeCard() {
   const [inputValue, setInputValue] = useState("");
   const [preInputs, setPreInputs] = useState([]);
   const [inputResult, setInputResult] = useState([]);
-  const [rootUser, setRootUser] = useState("root@amazing :~$");
+  const [rootUser, setRootUser] = useState("root@devarshi :~ $");
+  const [maximize, setMaximize] = useState(false);
 
   const inputValueHandler = (e) => {
     setInputValue(e.target.value);
@@ -104,13 +105,28 @@ function HomeCard() {
   return (
     <>
       <Card
-        className={style.CardContainer}
+        className={`${style.CardContainer} ${
+          maximize ? style.maximizeClass : ``
+        }`}
         onClick={() => inputEl.current.focus()}
       >
         <Card.Header className={style.CardHeader}>
-          <GrFormClose className={style.CloseIcon} />
-          <VscChromeMaximize className={style.MaximizeIcon} />
-          <HiMinusSm className={style.MinimizeIcon} />
+          <GrFormClose
+            className={style.CloseIcon}
+            onClick={() =>
+              (window.location.href = "https://github.com/dpatel-8112")
+            }
+          />
+          <VscChromeMaximize
+            className={style.MaximizeIcon}
+            onClick={() => setMaximize(!maximize)}
+          />
+          <HiMinusSm
+            className={style.MinimizeIcon}
+            onClick={() =>
+              (window.location.href = "http://dpatel-8112.github.io/portfolio")
+            }
+          />
         </Card.Header>
         <Card.Body className={style.CardBody}>
           {/* <Card.Title>Special title treatment</Card.Title> */}
