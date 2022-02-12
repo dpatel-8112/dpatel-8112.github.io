@@ -159,12 +159,12 @@ function HomeCard() {
 
       <div style={{ display: "flex" }}>
         <div className={style.LinkToPortfolio}>
-          <a target="_blank" href="http://amazingdotdp.me/portfolio/">
+          <a target="_blank" href="http://dpatel-8112.github.io/portfolio">
             PortFolio
           </a>
         </div>
         <div className={style.LinkToPortfolio}>
-          <a target="_blank" href="http://amazingdotdp.me/web-projects/">
+          <a target="_blank" href="http://dpatel-8112.github.io/web-projects/">
             Web Projects
           </a>
         </div>
