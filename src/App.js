@@ -4,7 +4,7 @@ import Home from "./component/Home";
 import { useState } from "react";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   localStorage.setItem("darkMode", darkMode);
 
   const darkModeHandler = (e) => {

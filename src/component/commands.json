@@ -3,7 +3,7 @@
     "id": 0,
     "type": "ls",
     "command": "ls",
-    "result": ["hi", "whois", "github", "portfolio", "projects", "clear"]
+    "result": ["hi", "whois", "github", "portfolio", "projects", "clear","exit"]
   },
   {
     "id": 1,
@@ -15,7 +15,7 @@
     "id": 2,
     "command": "hi",
     "type": "text",
-    "result": ["Hi ...", "Welcome to My Website"]
+    "result": ["Hi ...", "Welcome to My Website."," Pursuing a B.E. in Computer Science from Chandigarh University. I am looking for an opportunity where I can apply my skills and knowledge to the growth of an organization. Aspiring to become a Software Engineer in a challenging environment that welcomes innovative ideas, offers growth opportunities, and promotes a positive work environment."]
   },
   {
     "id": 3,
@@ -23,7 +23,9 @@
     "type": "text",
     "result": [
       "My name is Devarshi Patel.",
-      "I develop Web Application using ReactJS"
+      "I am FULL STACK Developer.",
+      "I write code and make stuff.",
+      "For more info visit my github : @dpatel-8112"
     ]
   },
   {
@@ -55,5 +57,11 @@
     "command": "clear",
     "type": "text",
     "result": []
+  } ,
+  {
+    "id": 9,
+    "command": "exit",
+    "type": "link",
+    "link": "https://dpatel-8112.github.io/links/"
   }
 ]

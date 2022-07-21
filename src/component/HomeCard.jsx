@@ -23,7 +23,8 @@ function HomeCard() {
   };
 
   const externalLinkHandler = (linkItem) => {
-    if (window.confirm(`Would you like to visit my ${inputValue}`)) {
+    if(inputValue == "exit") window.location.href = linkItem.link;
+    else if (window.confirm(`Would you like to visit my ${inputValue}`)) {
       window.open(linkItem.link);
       setInputResult(
         <a target="_blank" href={linkItem.link}>
