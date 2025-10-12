@@ -25,16 +25,16 @@ const Phone = (props: Props) => {
       </div>
       <div className="Links_Container">
         <Link
-          link="http://devarshipatel.tech/portfolio"
+          link="https://devarshipatel.com/"
           displayName="Portfolio"
         />
         <Link
-          link="https://drive.google.com/file/d/1toGeO7d-QVnp44_C9i49AyjGkEIZi7d_/view?usp=sharing"
+          link="https://resume.devarshipatel.com/"
           displayName="Resume"
         />
       </div>
       <div className="Social_Container">
-        <Social link="mailto:devarshi-patel@outlook.com" icon={AiOutlineMail} />
+        <Social link="mailto:devarshidotpatel@gmail.com" icon={AiOutlineMail} />
         <Social
           link="https://www.linkedin.com/in/devarshi-dot-patel"
           icon={AiOutlineLinkedin}
