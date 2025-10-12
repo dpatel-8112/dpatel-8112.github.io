@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap");
+* {
+  transition: all 0.02s;
+}
+.Phone_Container {
+  display: flex;
+  flex-direction: column;
+  height: 640px;
+  width: 360px;
+  /* border: 10px solid black; */
+  border-radius: 35px;
+  padding: 40px 15px;
+  box-shadow: 0px 0px 15px rgba(0, 255, 242, 0.568);
+  animation-name: blinking;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@media (max-width: 400px) {
+  .Phone_Container {
+    height: 70vh;
+    width: 80vw;
+    border: transparent;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    box-shadow: 0px 0px 15px rgba(0, 255, 242, 0);
+  }
+  25% {
+    box-shadow: 0px 0px 15px rgba(0, 255, 242, 0.25);
+  }
+  50% {
+    box-shadow: 0px 0px 15px rgba(0, 255, 242, 0.5);
+  }
+  100% {
+    box-shadow: 0px 0px 15px rgba(0, 255, 242, 1);
+  }
+}
+
+.Image_Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Image_Container img {
+  width: 110px;
+  border-radius: 50%;
+  /* box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.2); */
+  box-shadow: 1px 1px 5px rgb(0 255 205 / 32%);
+}
+
+.Heading_Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: large;
+  padding: 15px 0px;
+}
+.Heading_Container .Name {
+  font-weight: 900;
+  font-size: larger;
+  letter-spacing: 0.5px;
+  font-family: "Nunito", sans-serif;
+}
+.Heading_Container .Greeting {
+  font-weight: 500;
+  font-size: large;
+  letter-spacing: 1px;
+}
+
+.Links_Container {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 30px;
+}
+.Links_Container a {
+  text-decoration: none;
+  color: inherit;
+}
+.Links_Container .Link_Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  /* border: 2px solid white; */
+  box-shadow: 0px 0px 10px rgba(245, 245, 245, 0.342);
+  border-radius: 6px;
+  cursor: pointer;
+}
+.Links_Container .Link_Container:hover {
+  background-color: #282c34d8;
+  /* border: 2px solid rgb(0, 128, 32); */
+  border: none;
+  box-shadow: 0px 0px 15px rgba(240, 225, 88, 0.575);
+}
+.Links_Container .Link_Container .Link {
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 2px;
+}
+
+.Social_Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+.Social_Container .Social_Link {
+  cursor: pointer;
+  font-size: larger;
+  padding: 5px;
+}
+.Social_Container .Social_Link a {
+  text-decoration: none;
+  color: inherit;
+}
