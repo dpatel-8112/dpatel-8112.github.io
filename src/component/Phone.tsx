@@ -9,6 +9,7 @@ import {
   AiOutlineMail,
   AiOutlineLinkedin,
   AiOutlineGithub,
+  AiOutlineMedium,
 } from "react-icons/ai";
 
 interface Props {}
@@ -35,15 +36,10 @@ const Phone = (props: Props) => {
       </div>
       <div className="Social_Container">
         <Social link="mailto:devarshidotpatel@gmail.com" icon={AiOutlineMail} />
-        <Social
-          link="https://www.linkedin.com/in/devarshi-dot-patel"
-          icon={AiOutlineLinkedin}
-        />
+        <Social link="https://devarshi-patel.medium.com/" icon={AiOutlineMedium} />
+        <Social link="https://www.linkedin.com/in/devarshi-dot-patel" icon={AiOutlineLinkedin} />
         <Social link="https://github.com/dpatel-8112" icon={AiOutlineGithub} />
-        <Social
-          link="https://www.instagram.com/devarshi_patel_/"
-          icon={AiOutlineInstagram}
-        />
+        <Social link="https://www.instagram.com/devarshi_patel_/" icon={AiOutlineInstagram} />
       </div>
     </div>
   );
