@@ -36,6 +36,6 @@ export const LinkData = [
     // },
     {
         "name": "Resume",
-        "url": "https://resume.devarshipatel.com/"
+        "url": "/resume.pdf"
     }
 ];
