@@ -30,12 +30,12 @@ export const SocialData = [
 
 // Similary for LinkData
 export const LinkData = [
-    // {
-    //     "name": "Portfolio",
-    //     "url": "https://devarshipatel.com/"
-    // },
+    {
+        "name": "Portfolio",
+        "url": "https://devarshipatel.com/"
+    },
     {
         "name": "Resume",
-        "url": "https://resume.devarshipatel.com/"
+        "url": "/resume.pdf"
     }
 ];
