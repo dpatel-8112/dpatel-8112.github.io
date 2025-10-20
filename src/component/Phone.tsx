@@ -4,42 +4,42 @@ import "../style/Phone.css";
 import profile from "../images/profile-2.jpg";
 import Link from "./Link";
 import Social from "./Social";
-import {
-  AiOutlineInstagram,
-  AiOutlineMail,
-  AiOutlineLinkedin,
-  AiOutlineGithub,
-  AiOutlineMedium,
-} from "react-icons/ai";
 
-interface Props {}
+import {LinkData, SocialData} from "../data/portfolioData"
 
-const Phone = (props: Props) => {
+
+const Phone = () => {
   return (
     <div className="Phone_Container">
-      <div className="Image_Container">
-        <img src={profile} alt="" />
-      </div>
-      <div className="Heading_Container">
-        <div className="Name">Devarshi Patel</div>
-        <div className="Greeting">નમસ્તે</div>
-      </div>
-      <div className="Links_Container">
-        <Link
-          link="https://devarshipatel.com/"
-          displayName="Portfolio"
-        />
-        <Link
-          link="https://resume.devarshipatel.com/"
-          displayName="Resume"
-        />
-      </div>
+        <div className="Top_Container">
+          <div className="Image_Container">
+            <img src={profile} alt="" />
+          </div>
+          <div className="Heading_Container">
+            <div className="Name">{"Devarshi Patel"}</div>
+            <div className="Greeting">નમસ્તે</div>
+          </div>
+          <div className="Links_Container">
+              {LinkData.map((linkItem, index) => (
+                <Link
+                  key={index}
+                  link={linkItem.url}
+                  displayName={linkItem.name}
+                />
+              ))
+              }
+          </div>
+        </div>
       <div className="Social_Container">
-        <Social link="mailto:devarshidotpatel@gmail.com" icon={AiOutlineMail} />
-        <Social link="https://devarshi-patel.medium.com/" icon={AiOutlineMedium} />
-        <Social link="https://www.linkedin.com/in/devarshi-dot-patel" icon={AiOutlineLinkedin} />
-        <Social link="https://github.com/dpatel-8112" icon={AiOutlineGithub} />
-        <Social link="https://www.instagram.com/devarshi_patel_/" icon={AiOutlineInstagram} />
+        {
+          SocialData.map((socialItem, index) => (
+            <Social
+              key={index}
+              link={socialItem.url}
+              icon={socialItem.icon}
+            />
+          ))
+        }
       </div>
     </div>
   );
